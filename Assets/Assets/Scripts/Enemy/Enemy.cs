@@ -20,8 +20,8 @@ namespace Assets.Scripts.Enemy
         #region Settings
         
         [Header("Settings: "), Space(10)]
-        [Range(1, 5)] public int Hp;
-        [Range(1, 2)] public int Damage;
+        public int Hp;
+        public int Damage;
         
         #endregion
         
@@ -45,43 +45,53 @@ namespace Assets.Scripts.Enemy
 
         private static void SetStartSettingsForVisual(VisualEffect _materialize, GameObject _enemy)
         {
-            var _mesh = _enemy.GetComponent<MeshFilter>().sharedMesh;
-            var _meshMaterial = _enemy.GetComponent<MeshRenderer>().material;
+            var mesh = _enemy.GetComponent<MeshFilter>().sharedMesh;
+            var meshMaterial = _enemy.GetComponent<MeshRenderer>().material;
             
-            _materialize.SetMesh("MeshToMaterialize", _mesh);
-            _materialize.SetVector4("Color", _meshMaterial.GetColor("_EmissionColor"));
-            _materialize.SetVector4("EmissionColor", _meshMaterial.GetColor("_EmissionColor"));
+            _materialize.SetMesh("MeshToMaterialize", mesh);
+            _materialize.SetVector4("Color", meshMaterial.GetColor("_EmissionColor"));
+            _materialize.SetVector4("EmissionColor", meshMaterial.GetColor("_EmissionColor"));
         }
 
         private void SetStartSettings(EnemyControl _enemyControl)
         {
-            _enemyControl.Speed = Speed;
+            var speedAmplifier = (int)(GameManager.Instance.GetGameData.IndexCurrentWave / 3);
+            var hpAmplifier = (int)(GameManager.Instance.GetGameData.IndexCurrentWave / 5);
+            var damageAmplifier = (int)(GameManager.Instance.GetGameData.IndexCurrentWave / 10); 
+            
+            _enemyControl.Speed = Speed + speedAmplifier;
+            _enemyControl.Damage = Damage + damageAmplifier;
+            _enemyControl.Hp = Hp + hpAmplifier;
+            
             _enemyControl.enabled = true;
         }
         
         public IEnumerator Instantiate(Transform _spawnPoint, Vector3 _position, Quaternion _rotation, SphereCollider _collider)
         {
             // Spawn
-            var _enemy = Instantiate(EnemyPrefab, _spawnPoint).transform;
-            _enemy.localPosition = _position;
-            _enemy.localRotation = _rotation;
+            var enemy = Instantiate(EnemyPrefab, _spawnPoint).transform;
+            enemy.localPosition = _position;
+            enemy.localRotation = _rotation;
 
-            var _materialize = _enemy.GetComponent<VisualEffect>();
+            var materialize = enemy.GetComponent<VisualEffect>();
             
-            SetStartSettingsForVisual(_materialize, _enemy.GetChild(0).gameObject);
+            SetStartSettingsForVisual(materialize, enemy.GetChild(0).gameObject);
             // Execute animation for visual
-            _materialize.enabled = true;
-            _materialize.Play();
+            materialize.enabled = true;
+            materialize.Play();
 
             yield return new WaitForSeconds(3f);
-            _materialize.enabled = false;
+            if (enemy)
+            {
+                materialize.enabled = false;
 
-            var _coll = _enemy.GetComponent<SphereCollider>();
-            _coll.enabled = true;
-            _coll.Ignore(_collider);
+                var coll = enemy.GetComponent<SphereCollider>();
+                coll.enabled = true;
+                coll.Ignore(_collider);
             
-            _enemy.GetChild(0).gameObject.SetActive(true);
-            SetStartSettings(_enemy.GetComponent<EnemyControl>());
+                enemy.GetChild(0).gameObject.SetActive(true);
+                SetStartSettings(enemy.GetComponent<EnemyControl>());
+            }
             
             yield return null;
         }

@@ -1,5 +1,8 @@
 using System;
+using Assets.Scripts.Enemy;
 using Assets.Scripts.Object;
+using Assets.Scripts.Player;
+using Shaders.RippleDistortion;
 using UnityEngine;
 
 namespace Assets.Scripts.Control
@@ -24,6 +27,20 @@ namespace Assets.Scripts.Control
                     break;
                 default:
                     throw new ArgumentOutOfRangeException();
+            }
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.CompareTag("Enemy"))
+            {
+                RipplePostProcessor.ins.Ripple(transform.position);
+                
+                var damage = 1;
+                if (other.GetComponent<EnemyControl>())
+                    damage = other.GetComponent<EnemyControl>().Damage;
+                
+                Health.Instance.DamageHp(Explosion, transform, damage);
             }
         }
     }

@@ -43,7 +43,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fade: 0.5566943
+    - _Fade: 0.8950391
     - _Scale: 200
     m_Colors:
     - _DisolveColor: {r: 0.98761165, g: 3.9999995, b: 0, a: 1}

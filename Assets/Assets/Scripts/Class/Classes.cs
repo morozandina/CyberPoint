@@ -25,7 +25,7 @@ namespace Assets.Scripts.Class
     {
         Simple,
         Laser,
-        Morgenshtern,
+        Morgenstern,
         Follow,
         Explosion,
     }
@@ -33,11 +33,28 @@ namespace Assets.Scripts.Class
     [Serializable]
     public enum WhereCameraWatch
     {
-        Root,
-        Start,
-        Settings,
-        Shop,
-        Record,
-        Pause
+        Root = 0,
+        Start = 1,
+        Settings = 2,
+        Shop = 3,
+        Record = 4,
+        Pause = 5
+    }
+
+    [Serializable]
+    public class Ability
+    {
+        [Header("About")] [Space(2)]
+        public string name;
+        [TextArea(5, 5)] public string description;
+        
+        [Header("Visual")] [Space(2)]
+        public Sprite image;
+
+        [Header("Settings")] [Space(2)] [Range(0, 100)]
+        public int probability;
+        [HideInInspector] public bool isUsed = false;
+
+        public int index;
     }
 }

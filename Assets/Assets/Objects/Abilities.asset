@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87a1dd5fcb8fd42ac85b9c60498a3ad2, type: 3}
+  m_Name: Abilities
+  m_EditorClassIdentifier: 
+  skills:
+  - name: Swift Stride
+    description: Increase movement speed by 10%.
+    image: {fileID: 21300000, guid: 83cf1895a9afa624191bf1475d486bad, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Jet Boosters
+    description: Add temporary bursts of speed while moving.
+    image: {fileID: 21300000, guid: 5fe62fd8dcf6ad24c843e8c611ba7f44, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Vitality Boost
+    description: Increase maximum health by 1.
+    image: {fileID: 21300000, guid: bff23d7774e36434da0a745ad6750e9c, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Armor Plating
+    description: Reduce incoming damage by 15%.
+    image: {fileID: 21300000, guid: d5282118f7110e5408ef606c3a8e94c3, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Regenerative Shield
+    description: Slowly regenerate a portion of health over time.
+    image: {fileID: 21300000, guid: 6fb49b935c28b9b47b3480d92dc27803, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Reflective Shield
+    description: Deflect a percentage of incoming projectiles.
+    image: {fileID: 21300000, guid: 39f279ed4a4ace74baf542d8e30e2675, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Fortified Core
+    description: Decrease critical hit damage taken by 25%.
+    image: {fileID: 21300000, guid: 980dd99a6cc39584f9a1603f8be00492, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Rapid Fire
+    description: Increase fire rate by 20%.
+    image: {fileID: 21300000, guid: 72a78f7056d6aab4695a61dbefb47769, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Homing Missiles
+    description: Launch homing missiles at enemies.
+    image: {fileID: 21300000, guid: a177acd50d78ed84f8c6dc0392050358, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Plasma Burst
+    description: Unleash a powerful energy wave periodically.
+    image: {fileID: 21300000, guid: 8eebe04cfdf7d3b40bd265d99e9c9ab4, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Soul Siphon
+    description: Absorb defeated enemies' energy for health.
+    image: {fileID: 21300000, guid: 82138cd442a763a439d46be660906b72, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Swift Reload
+    description: Reduce weapon reload time by 20%.
+    image: {fileID: 21300000, guid: e657bfe87d08c7d419c61e237ee760d5, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Clearer
+    description: Temporarily deal extra damage to enemies.
+    image: {fileID: 21300000, guid: 59cf9a6a98616c6498f5a782421471fd, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Tactical Retreat
+    description: Temporarily slow down enemy movement.
+    image: {fileID: 21300000, guid: 16a83ae792e40e646bc918413286944a, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Mastery Focus
+    description: Enhance the effects of already unlocked upgrades.
+    image: {fileID: 21300000, guid: c110a13f541349647b4a7b90edbda80f, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Cooldown Reduction
+    description: Reduce the cooldown times of special abilities.
+    image: {fileID: 21300000, guid: 175c7b68f2569924394d923da21b8264, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  - name: Skill Amplification
+    description: Increase the potency of active skills.
+    image: {fileID: 21300000, guid: 814f9dff8d90e1c42b9a47058be2b8b0, type: 3}
+    probability: 0
+    isUsed: 0
+    index: 0
+  abilities:
+  - name: Dash Mastery
+    description: Gain the ability to perform a quick dash in any direction.
+    image: {fileID: 21300000, guid: a0a75620bf18441468ae7f860a3473ed, type: 3}
+    probability: 70
+    isUsed: 0
+    index: 0
+  - name: Wall Runner
+    description: Gain the ability to choose the direction of the ricochet.
+    image: {fileID: 21300000, guid: cdc0b8990f6f96548bb931ed043db87d, type: 3}
+    probability: 70
+    isUsed: 0
+    index: 0
+  - name: Piercing Shots
+    description: Allow bullets to pass through enemies.
+    image: {fileID: 21300000, guid: f37f56934277e7440985eab16c98ce60, type: 3}
+    probability: 100
+    isUsed: 0
+    index: 0
+  - name: Explosive Rounds
+    description: Bullets explode upon impact, damaging nearby enemies.
+    image: {fileID: 21300000, guid: 23d7f827e24712543a25f74f2fe6b689, type: 3}
+    probability: 90
+    isUsed: 0
+    index: 0
+  - name: Ricochet
+    description: Bullets bounce off walls and surfaces.
+    image: {fileID: 21300000, guid: af32218726bec6645b60881b6a0cfa94, type: 3}
+    probability: 100
+    isUsed: 0
+    index: 0
+  - name: Time Warp
+    description: Slow down time for a brief period.
+    image: {fileID: 21300000, guid: 9e691c00c1f10c94c936b065df50ee90, type: 3}
+    probability: 90
+    isUsed: 0
+    index: 0
+  - name: Shadow Cloak
+    description: Temporarily move through enemies.
+    image: {fileID: 21300000, guid: 8f17e93f7cb366942a89883402638ded, type: 3}
+    probability: 100
+    isUsed: 0
+    index: 0
+  - name: Energy Nova
+    description: Release a damaging shockwave around the player.
+    image: {fileID: 21300000, guid: 26ba9ec2ec1466d4ca4e0a64ead6a05f, type: 3}
+    probability: 80
+    isUsed: 0
+    index: 0
+  - name: Electromagnetic Pulse
+    description: Disable nearby enemy shields and gadgets.
+    image: {fileID: 21300000, guid: e2f628a206f0d554d83db0bdef813158, type: 3}
+    probability: 30
+    isUsed: 0
+    index: 0
+  - name: Medic Training
+    description: Enemy can periodically heal the player.
+    image: {fileID: 21300000, guid: 5dca33d950088cf4381268418d581fc6, type: 3}
+    probability: 30
+    isUsed: 0
+    index: 0
+  powers:
+  - name: Supernova Blast
+    description: Unleash a devastating explosion, clearing the area.
+    image: {fileID: 21300000, guid: 295fa09db325e504c8e5904c8683c105, type: 3}
+    probability: 40
+    isUsed: 0
+    index: 0
+  - name: Time Paradox
+    description: Reverse time and undo recent actions.
+    image: {fileID: 21300000, guid: e1f39dcda8889fa4f9126c5f782ae2bf, type: 3}
+    probability: 30
+    isUsed: 0
+    index: 0
+  - name: Celestial Summoning
+    description: Call upon powerful celestial beings for assistance.
+    image: {fileID: 21300000, guid: 93c4dc3ca8e16a443afddadf62240004, type: 3}
+    probability: 50
+    isUsed: 0
+    index: 0
+  - name: Armageddon Rain
+    description: Rain down a barrage of meteors on enemies.
+    image: {fileID: 21300000, guid: daa5b7c46789b7045817009cc325a383, type: 3}
+    probability: 40
+    isUsed: 0
+    index: 0
+  - name: Reality Distortion
+    description: 'Manipulate reality to create temporary barriers. '
+    image: {fileID: 21300000, guid: 4c903310337879642800accddc0ccdfa, type: 3}
+    probability: 70
+    isUsed: 0
+    index: 0
+  - name: Eternal Vigilance
+    description: Temporarily become invulnerable and deal massive damage.
+    image: {fileID: 21300000, guid: 787000d41dc3c054787c8cb46395f6e1, type: 3}
+    probability: 20
+    isUsed: 0
+    index: 0
+  - name: Void Embrace
+    description: Absorb enemies into a void, neutralizing them.
+    image: {fileID: 21300000, guid: 093b5a82d1c01c9419d55639e7c74743, type: 3}
+    probability: 50
+    isUsed: 0
+    index: 0

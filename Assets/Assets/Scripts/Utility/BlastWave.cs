@@ -36,6 +36,8 @@ namespace Assets.Scripts.Utility
                 Draw(currentRadius);
                 yield return null;
             }
+            
+            Destroy(gameObject);
         }
 
         private void Draw(float currentRadius)

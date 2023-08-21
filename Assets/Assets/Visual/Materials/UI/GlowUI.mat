@@ -46,5 +46,6 @@ Material:
     - _Fade: 1
     - _Scale: 40
     m_Colors:
+    - _DisolveColor: {r: 1, g: 1, b: 1, a: 1}
     - _GlowColor: {r: 2.828427, g: 2.828427, b: 2.828427, a: 1}
   m_BuildTextureStacks: []

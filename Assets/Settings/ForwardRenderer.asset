@@ -37,7 +37,7 @@ MonoBehaviour:
       type: 3}
     objectMotionVector: {fileID: 4800000, guid: 7b3ede40266cd49a395def176e1bc486,
       type: 3}
-  m_AssetVersion: 1
+  m_AssetVersion: 2
   m_OpaqueLayerMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -51,9 +51,10 @@ MonoBehaviour:
     passOperation: 0
     failOperation: 0
     zFailOperation: 0
-  m_ShadowTransparentReceive: 1
+  m_ShadowTransparentReceive: 0
   m_RenderingMode: 0
   m_DepthPrimingMode: 0
+  m_CopyDepthMode: 0
   m_AccurateGbufferNormals: 0
   m_ClusteredRendering: 0
   m_TileSize: 32
@@ -68,9 +69,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 524f846326f55f44ebff51280cd914b5, type: 3}
-  m_Name: RippleEffect_RenderPassFeature
+  m_Name: RippleEffectRenderPassFeature
   m_EditorClassIdentifier: 
-  m_Active: 1
+  m_Active: 0
   filterMode: 1
   TheRenderPassEvent: 500
   blitShaderPassIndex: -1

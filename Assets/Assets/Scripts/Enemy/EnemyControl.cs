@@ -7,6 +7,8 @@ namespace Assets.Scripts.Enemy
     public class EnemyControl : ObjectControl
     {
         public static Action DestroyAll;
+
+        [HideInInspector] public int Hp, Damage;
         
         private void OnTriggerEnter(Collider other)
         {
@@ -22,8 +24,13 @@ namespace Assets.Scripts.Enemy
         private void DestroyEnemy()
         {
             Instantiate(Explosion, transform.position, Quaternion.identity);
-            GameManager.EnemyDestroyed?.Invoke();
-            Destroy(gameObject);
+            if (Hp > 1)
+                Hp--;
+            else
+            {
+                GameManager.EnemyDestroyed?.Invoke();
+                Destroy(gameObject);
+            }
         }
     }
 }

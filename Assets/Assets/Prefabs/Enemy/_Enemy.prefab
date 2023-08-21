@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2678421499000280208}
   - component: {fileID: 8939708719925787371}
   - component: {fileID: 3324194135900889972}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -93,11 +93,12 @@ GameObject:
   m_Component:
   - component: {fileID: 6501714173079758755}
   - component: {fileID: 6501714173079758750}
+  - component: {fileID: -6333186994295070031}
   - component: {fileID: 6501714173079758747}
   - component: {fileID: -7651554504894359813}
   - component: {fileID: 8344043301056137634}
   - component: {fileID: 5262836692533140544}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: _Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -130,6 +131,19 @@ SphereCollider:
   m_Material: {fileID: 13400000, guid: a771f3fe6ad45704badc12c243dbb44b, type: 2}
   m_IsTrigger: 0
   m_Enabled: 0
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!135 &-6333186994295070031
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6501714173079758754}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
